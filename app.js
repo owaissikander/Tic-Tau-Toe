@@ -25,7 +25,7 @@ function boxclicked(e) {
         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
         //currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
         if (playerhaswon() !== false) {
-            playertext = `${currentPlayer} has won`
+            playertext.innerHTML = `${currentPlayer} has won`
             let wining_blocks = playerhaswon()
             wining_blocks.map(box => boxes[box].style.backgroundColor = indicator)
             console.log(wining_blocks);
@@ -72,7 +72,7 @@ function restart() {
         box.innerText = ''
         box.style.backgroundColor = ''
     })
-    playerText = 'Tic Tau Toe'
+    playertext = 'Tic Tau Toe'
 
     currentPlayer = X_TEXT
 }
